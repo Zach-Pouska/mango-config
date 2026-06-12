@@ -1,7 +1,7 @@
 @define-color color-bg                                  #1b1a1a;
-@define-color color-fg                                  #ebdbb2;
-@define-color color-button-bg                           #83a598;
-@define-color color-button-fg                           #1b1a1a;
+@define-color color-fg                                  #ffffff;
+@define-color color-button-bg                           #00000f;
+@define-color color-button-fg                           #ffffff;
 @define-color color-button-urgent-bg                    #fb4934;
 @define-color color-button-urgent-fg                    #1b1a1a;
 @define-color color-workspace-button-bg                 #504945;
@@ -28,8 +28,8 @@
 @define-color color-widget-battery-low-fg               #1b1a1a;
 @define-color color-widget-battery-low-blink-bg         #df402f;
 @define-color color-widget-battery-low-blink-fg         #1b1a1a;
-@define-color color-widget-backlight-bg                 #d3869b;
-@define-color color-widget-backlight-fg                 #1b1a1a;
+@define-color color-widget-backlight-bg                 #00000f;
+@define-color color-widget-backlight-fg                 #ffffff;
 @define-color color-widget-temperature-bg               #8ec07c;
 @define-color color-widget-temperature-fg               #1b1a1a;
 @define-color color-widget-temperature-critical-bg      #df402f;
@@ -54,8 +54,8 @@
 @define-color color-widget-scratchpad-fg                #ff0000;
 @define-color color-widget-power-bg                     #83a598;
 @define-color color-widget-power-fg                     #1b1a1a;
-@define-color color-widget-window-bg                    #bd788a;
-@define-color color-widget-window-fg                    #111111;
+@define-color color-widget-window-bg                    #00000f;
+@define-color color-widget-window-fg                    #ffffff;
 @define-color color-widget-keyboard-state-bg            #fe8019;
 @define-color color-widget-keyboard-state-fg            #1b1a1a;
 @define-color color-widget-language-bg                  #fe8019;

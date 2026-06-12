@@ -15,12 +15,14 @@ swaync -c ~/.config/mango/swaync/config.jsonc -s ~/.config/mango/swaync/style.cs
 
 #wlsunset -T 3501 -t 3500 >/dev/null 2>&1 &
 
-swaybg -i ~/.config/mango/wallpaper/wallpaper.png >/dev/null 2>&1 &
+# Prevent sleeping while audio is playing
+sway-audio-idle-inhibit >/dev/null 2>&1 &
+
+# Wallpaper
+#swaybg -i ~/.config/mango/wallpaper/wallpaper.png >/dev/null 2>&1 &
+waypaper --restore >/dev/null 2>&1 & 
 
 waybar -c ~/.config/mango/waybar/config.jsonc -s ~/.config/mango/waybar/style.css >/dev/null 2>&1 &
-
-
-
 
 
 # keep clipboard content
@@ -37,6 +39,11 @@ nm-applet >/dev/null 2>&1 &
 
 # Permission authentication
 /usr/lib/xfce-polkit/xfce-polkit >/dev/null 2>&1 &
+
+nextcloud >/dev/null 2>&1 &
+keepassxc >/dev/null 2>&1 &
+#copyq >/dev/null 2>&1 &
+cursor-clip --daemon >/dev/null 2>&1 &
 
 
 # change light value and volume value by swayosd-client in keybind
