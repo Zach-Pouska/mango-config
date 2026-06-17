@@ -1,26 +1,28 @@
 @define-color color-bg                                  #1b1a1a;
 @define-color color-fg                                  #ffffff;
-@define-color color-button-bg                           #00000f;
-@define-color color-button-fg                           #ffffff;
 @define-color color-button-urgent-bg                    #fb4934;
 @define-color color-button-urgent-fg                    #1b1a1a;
+/*@define-color color-button-bg                           #00000f;
+@define-color color-button-fg                           #ffffff;
 @define-color color-workspace-button-bg                 #504945;
-@define-color color-workspace-button-fg                 #ebdbb2;
+@define-color color-workspace-button-fg                 #ffffff;
 @define-color color-workspace-button-hover-bg           #665c54;
-@define-color color-workspace-button-hover-fg           #ebdbb2;
-@define-color color-workspace-button-focused-bg         #83a598;
+@define-color color-workspace-button-hover-fg           #ffffff;
+*/
+@define-color color-workspace-button-focused-bg         #ff0598;
 @define-color color-workspace-button-focused-fg         #1b1a1a;
 @define-color color-taskbar-button-minimized-bg         #bd788a;
 @define-color color-taskbar-button-minimized-fg         #1b1a1a;
 @define-color color-taskbar-button-active-bg            #BABD2C;
 @define-color color-taskbar-button-active-fg            #1b1a1a;
+/*
 @define-color color-widget-audio-bg                     #e3ac2b;
 @define-color color-widget-audio-fg                     #1b1a1a;
 @define-color color-widget-audio-hover-bg               #e3ac2b;
 @define-color color-widget-audio-hover-fg               #1b1a1a;
 @define-color color-widget-audio-muted-bg               #e3ac2b;
 @define-color color-widget-audio-muted-fg               #1b1a1a;
-@define-color color-widget-clock-bg                     #d5c4a1;
+@define-color color-widget-clock-bg                     #ffffff;
 @define-color color-widget-clock-fg                     #1b1a1a;
 @define-color color-widget-battery-bg                   #b8bb26;
 @define-color color-widget-battery-fg                   #1b1a1a;
@@ -36,7 +38,7 @@
 @define-color color-widget-temperature-critical-fg      #1b1a1a;
 @define-color color-widget-memory-bg                    #83a598;
 @define-color color-widget-memory-fg                    #1b1a1a;
-@define-color color-widget-cpu-bg                       #d5c4a1;
+@define-color color-widget-cpu-bg                       #ffffff;
 @define-color color-widget-cpu-fg                       #1b1a1a;
 @define-color color-widget-power-profile-balanced-bg    #d3869b;
 @define-color color-widget-power-profile-balanced-fg    #1b1a1a;
@@ -52,7 +54,7 @@
 @define-color color-widget-custom-notification-fg        #dfcdb3;
 @define-color color-widget-scratchpad-bg                #ff0000;
 @define-color color-widget-scratchpad-fg                #ff0000;
-@define-color color-widget-power-bg                     #83a598;
+@define-color color-widget-power-bg                     #ffffff;
 @define-color color-widget-power-fg                     #1b1a1a;
 @define-color color-widget-window-bg                    #00000f;
 @define-color color-widget-window-fg                    #ffffff;
@@ -61,7 +63,7 @@
 @define-color color-widget-language-bg                  #fe8019;
 @define-color color-widget-language-fg                  #1b1a1a;
 @define-color color-tooltip-bg                          #241F19;
-@define-color color-tooltip-fg                          #ebdbb2;
+@define-color color-tooltip-fg                          #ffffff;
 @define-color color-menu-bg                             #241F19;
 @define-color color-menuitem-bg                         #241F19;
 @define-color color-menuitem-fg                         #ebdbb2;
@@ -69,14 +71,15 @@
 @define-color color-menuitem-hover-fg                   #1b1a1a;
 @define-color color-menuitem-active-bg                  #ebdbb2;
 @define-color color-menuitem-active-fg                  #1b1a1a;
-@define-color color-gradient-fade                       #fbf1c7;
+*/
+@define-color color-gradient-fade           #ff0598;            /*#b8bb2f;*/
 
 * {
     font-family: "Maple Mono NF CN", monospace;
     font-size: 20px;
     font-weight: bold;
     border: none;
-    border-radius: 100px;
+    border-radius: 000px;
 }
 
 window#waybar {
@@ -96,7 +99,7 @@ window#waybar.hidden {
 
 button {
     border: none;
-    background-color: @color-button-bg;
+    background-color: @color-bg;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
@@ -106,8 +109,8 @@ button:hover {
 
 /* you can set a style on hover for any module like this */
 #pulseaudio:hover {
-    background-color: @color-widget-audio-hover-bg;
-    color: @color-widget-audio-hover-fg;
+    background-color: @color-bg;
+    color: @color-fg;
 }
 
 #workspaces {
@@ -160,7 +163,7 @@ button:hover {
 #taskbar button {
     padding-left: 8px;
     min-width: 22px;
-    background: linear-gradient(to top, @color-workspace-button-bg, mix(@color-workspace-button-bg, @color-gradient-fade, 0.25));
+    background: linear-gradient(to top, @color-bg, mix(@color-bg, @color-gradient-fade, 0.25));
     color: @color-workspace-button-fg;
 }
 
@@ -234,7 +237,7 @@ button:hover {
 }
 
 #custom-power {
-    background: linear-gradient(to top, @color-widget-power-bg, mix(@color-widget-power-bg, @color-gradient-fade, 0.25));
+    background: linear-gradient(to top, @color-bg, mix(@color-bg, @color-gradient-fade, 0.25));
     color: @color-widget-power-fg;
     font-family: "JetBrainsMono Nerd Font Propo", monospace;
     font-size: 20px;
@@ -242,7 +245,7 @@ button:hover {
 }
 
 #window {
-    background: linear-gradient(to top, @color-widget-window-bg, mix(@color-widget-window-bg, @color-gradient-fade, 0.25));
+    background: linear-gradient(to top, @color-bg, mix(@color-bg, @color-gradient-fade, 0.25));
     color: @color-widget-window-fg;
 }
 
@@ -253,7 +256,7 @@ window#waybar.empty #window {
 }
 
 #clock {
-    background: linear-gradient(to top, @color-widget-clock-bg, mix(@color-widget-clock-bg, @color-gradient-fade, 0.25));
+    background: linear-gradient(to top, @color-bg, mix(@color-bg, @color-gradient-fade, 0.25));
     color: @color-widget-clock-fg;
 }
 
@@ -398,12 +401,12 @@ label:focus {
 }
 
 #temperature.critical {
-    background: linear-gradient(to top, @color-widget-temperature-critical-bg, mix(@color-widget-temperature-critical-bg, @color-gradient-fade, 0.25));
+    background: linear-gradient(to top, @color-widget-temperature-critical-bg, mix(@color-bg, @color-gradient-fade, 0.25));
     color: @color-widget-temperature-critical-fg;
 }
 
 #tray {
-    background: linear-gradient(to top, @color-widget-tray-bg, mix(@color-widget-tray-bg, @color-gradient-fade, 0.25));
+    background: linear-gradient(to top, @color-bg, mix(@color-bg, @color-gradient-fade, 0.25));
 }
 
 #tray > .passive {
@@ -412,23 +415,23 @@ label:focus {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background: linear-gradient(to top, @color-widget-tray-needs-attention, mix(@color-widget-tray-needs-attention, @color-gradient-fade, 0.25));
+    background: linear-gradient(to top, @color-bg, mix(@color-bg, @color-gradient-fade, 0.25));
 }
 
 #network {
-    background: linear-gradient(to top, @color-widget-network-bg, mix(@color-widget-network-bg, @color-gradient-fade, 0.25));
-    color: @color-widget-network-fg;
+    background: linear-gradient(to top, @color-widget-network-bg, mix(@color-bg, @color-gradient-fade, 0.25));
+    color: @color-fg;
 }
 
 #custom-notification {
-    background: linear-gradient(to top, @color-widget-custom-notification-bg, mix(@color-widget-custom-notification-bg, @color-gradient-fade, 0.25));
-    color: @color-widget-custom-notification-fg;
+    background: linear-gradient(to top, @color-widget-custom-notification-bg, mix(@color-bg, @color-gradient-fade, 0.25));
+    color: @color-fg;
 }
 
 tooltip {
-    background-color: @color-tooltip-bg;
+    background-color: @color-bg;
     border: none;
-    border-radius: 20px;
+    border-radius: 0px;
 }
 
 tooltip decoration {
@@ -440,7 +443,7 @@ tooltip decoration:backdrop {
 }
 
 tooltip label {
-    color: @color-tooltip-fg;
+    color: @color-fg;
     padding: 3px 7px;
 }
 
@@ -448,18 +451,18 @@ tooltip label {
 menu {
   border-width: 2px;
   border-style: solid;
-  border-color: @color-menu-fg;
-  background: @color-menu-bg;
-  border-radius: 10px;
+  border-color: @color-fg;
+  background: @color-bg;
+  border-radius: 0px;
 }
 
 menuitem {
-  border-radius: 10px;
+  border-radius: 0px;
 }
 
 menuitem:hover {
-  color:  @color-menuitem-hover-fg;
-  background: @color-menuitem-hover-bg;
+  color:  @color-fg;
+  background: @color-bg;
 }
 
 

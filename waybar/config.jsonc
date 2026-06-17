@@ -18,10 +18,10 @@
         //"network",
         "cpu",
         "memory",
-        "temperature",
+        //"temperature",
         //"pulseaudio",
         //"backlight",
-        // "battery",
+         "battery",
         "clock"
         //"custom/power"
     ],
