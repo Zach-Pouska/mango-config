@@ -76,9 +76,22 @@
     },
     "clock": {
       "interval":1,
-      "format": "{:%Y-%m-%d %a, %H:%M:%S}", //	%a, %Y-%m-%d}",
-      "format-alt": " {:L%A, %b %d}",
-      "tooltip-format": "{:%Y}",
+      "format": "{:%Y-%m-%d, %a, %H:%M:%S}", //	%a, %Y-%m-%d}",
+      "tooltip-format": "{calendar}",
+      "calendar":{
+	    "mode": "year",
+      	    "mode-mon-col"  : 3,
+	    "weeks-pos"     : "right",
+	    "on-scroll"     : 1,
+	    "on-click-right": "mode",
+	    "format": {
+			"months":     "<span color='#ffffff'><b>{}</b></span>",
+			"days":       "<span color='#ffffff'><b>{}</b></span>",
+			"weeks":      "<span color='#88aa00'><b>W{}</b></span>",
+			"weekdays":   "<span color='#88aa00'><b>{}</b></span>",
+			"today":      "<span color='#ff0099'><b><u>{}</u></b></span>"
+		}
+      }
     },
     "cpu": {
       "interval": 2,

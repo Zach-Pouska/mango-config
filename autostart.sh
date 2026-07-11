@@ -25,9 +25,6 @@ swaync -c ~/.config/mango/swaync/config.jsonc -s ~/.config/mango/swaync/style.cs
 # Prevent sleeping while audio is playing
 sway-audio-idle-inhibit >/dev/null 2>&1 &
 
-# keep clipboard content - conflicts with other clipbaord managers
-#wl-clip-persist --clipboard regular --reconnect-tries 0 >/dev/null 2>&1 &
-
 # change light value and volume value by swayosd-client in keybind
 swayosd-server >/dev/null 2>&1 &
 
@@ -40,7 +37,7 @@ blueman-applet >/dev/null 2>&1 &
 nm-applet >/dev/null 2>&1 &
 
 # Permission authentication
-/usr/lib/xfce-polkit/xfce-polkit >/dev/null 2>&1 &
+/usr/bin/lxqt-policykit-agent  >/dev/null 2>&1 &
 
 # autostart tray apps
 nextcloud --background >/dev/null 2>&1 &
