@@ -21,20 +21,34 @@
 
 configuration {
     //font: "Maple Mono NF CN bold 18";
-    //font: "ocr a 20";
-    font: "ocr a 16";
-    modi: "drun";
+    font: "ocr a 20";
+    modi: "calc";
     show-icons: true;
-    sort: true;
-    sorting-method:"fzf";
+    sort: false;
+    //sorting-method:"fzf";
     //display-drun: " ";
-    display-drun: ": ";
+    display-calc: "->";
+    //display-list: "";
+    calc {
+	no-bold: false;
+	hint-welcome: "Qalc";
+	hint-result: "=";
+	automatic-save-to-history: true;
+        calc-command-history: true;
+	no-persist-history: false;
+	no-sort: true;
+	no-show-match: true;
+	terse: true;
+	calc-error-color: "Red";
+	reuse-result:  true;
+	calc-command: "echo -n '{result}' | wl-copy";
+    }
 }
 
 listview {
     columns: 1;
-    lines: 9;
-    fixed-height: true;
+    lines: 5;
+    fixed-height: false;
     fixed-columns: true;
     cycle: false;
     scrollbar: false;
@@ -44,7 +58,7 @@ listview {
 window {
     transparency: "real";
     width: 750px;
-    height: 500px;
+    //height: 300px;
     border-radius: @b-radius;
     background-color: @wbg-color;
     border: 4px solid;
@@ -57,12 +71,14 @@ prompt {
 }
 
 inputbar {
+    //children: ["prompt", "listview", "entry"];
     children: ["prompt", "entry"];
+    //children: ["prompt", "entry"];
     spacing: @g-spacing;
 }
 
 entry {
-    placeholder: "Search Apps";
+    placeholder: "";
     text-color: @fg-color;
     placeholder-color: @fgp-color;
 }
@@ -71,7 +87,8 @@ mainbox {
     spacing: @g-spacing;
     margin: @g-margin;
     padding: @g-padding;
-    children: ["inputbar", "listview", "message"];
+    //children: ["inputbar",  "message"];
+    children: ["inputbar", "listview" ,  "message"];
 }
 
 element {
@@ -119,7 +136,7 @@ element-text selected.normal {
 
 
 message {
-    background-color: red;
+    background-color: #ff0088;
     border: 0px solid;
 }
 

@@ -23,7 +23,7 @@ swaync -c ~/.config/mango/swaync/config.jsonc -s ~/.config/mango/swaync/style.cs
 #wlsunset -T 3501 -t 3500 >/dev/null 2>&1 &
 
 # Prevent sleeping while audio is playing
-sway-audio-idle-inhibit >/dev/null 2>&1 &
+#sway-audio-idle-inhibit >/dev/null 2>&1 &
 
 # change light value and volume value by swayosd-client in keybind
 swayosd-server >/dev/null 2>&1 &

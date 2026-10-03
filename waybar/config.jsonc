@@ -113,7 +113,7 @@
     "backlight": {
         // "device": "acpi_video1",
         "format": "{icon} {percent}%",
-        "format-icons": ["󰖔", "󰖨"],
+        "format-icons": ["󰖔", "󰖨"]
     },
     "battery": {
         "states": {
@@ -177,5 +177,5 @@
       "on-click": "sleep 0.1s && swaync-client -t -sw",
       "on-click-right": "swaync-client -d -sw",
       "escape": true
-    },
+    }
 }
