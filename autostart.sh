@@ -1,6 +1,13 @@
 #!/bin/bash
 set +e
 
+# If laptop env set, copy laptop.conf (for if its updated) to the location where the conf file sources and expects it
+if [ "${LAPTOP:-}" = 1 ]; then
+    # mkdir won't do anything to the dir if it's already there
+    mkdir -p ~/.conf/mangolaptop/
+    cp ~/.conf/mango/laptop.conf ~/.conf/mangolaptop/laptop.conf
+fi
+
 # some env can't auto run the portal, so need this
 /usr/lib/xdg-desktop-portal >/dev/null 2>&1 &
 /usr/lib/xdg-desktop-portal-wlr  >/dev/null 2>&1 &
